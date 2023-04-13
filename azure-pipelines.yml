@@ -10,7 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
+- script: 
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo terraform init
+      
+      echo terraform apply
   displayName: 'Run a one-line script'
 
 - script: |
